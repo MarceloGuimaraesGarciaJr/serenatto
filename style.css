@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-}
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 body {
     --bege: #E6E0D6;
     --marrom-escuro: #816D4F;
     --marrom-claro: #B29463;
     font-family: Barlow, sans-serif;
     height: 4000px;
+}
+
+a{
+    text-decoration: none;
 }
 input[type="checkbox"]:focus{
     background-color: var(--marrom-claro);
@@ -52,7 +53,22 @@ input[type=checkbox]:checked{
     --bs-btn-active-bg:var(--marrom-escuro);
 }
 
+.input-range::-webkit-slider-thumb{
+    background-color: var(--marrom-claro);
+}
+
 .botao-padrao{
     background-color: var(--marrom-claro);
-
+    color:black;
+}
+[data-bs-theme="dark"]{
+    color: white;
+    .nav-link, .card-body, .offcanvas,.accordion,.botao-padrao,.form-select,.form-floating, .form-floating:before{
+        --bs-nav-link-color:white;
+        --bs-card-color:white;
+        --bs-offcanvas-color:white;
+        --bs-body-color:white;
+        --bs-accordion-btn-focus-border-color:white;
+        color:white;
+    }
 }
